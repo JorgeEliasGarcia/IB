@@ -1,0 +1,18 @@
+#include <cmath>
+#include <iostream>
+
+int main() {
+  std::cout << "Este programa calcula la hipotenusa de un triángulo"
+            << std::endl;
+  std::cout << "Introduzca la distancia de uno se los lados" << std::endl;
+  double lado_1;
+  std::cin >> lado_1;
+  std::cout << "Introduzca la distancia del otro de los lados" << std::endl;
+  double lado_2;
+  std::cin >> lado_2;
+  std::cout << "La hipotenusa de su triángulo es: ";
+  std::cout << sqrt(lado_1 * lado_1 + lado_2 * lado_2) << " unidades"
+            << std::endl;
+
+  return 0;
+}

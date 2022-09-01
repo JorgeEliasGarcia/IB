@@ -1,0 +1,53 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica 2021-2022
+ *
+ * @file integer_division_and_reminder.cc
+ * @author Jorge Elías alu0101472294@ull.es
+ * @date Nov 10 2021
+ * @brief El programa lee dos numeros naturales a y b, con b > 0, e imprime la
+ * divisón entera d y el resto r de a dividido entre b. POr definición, d y r
+ * deben ser los únicos numeros enteros, tal que 0<r<b y db + r=a.
+ * @bug There are no known bugs
+ * @see https://jutge.org/problems/P48107
+ */
+
+#include<iostream>
+
+void PrimerMensajeInicial() {
+  std::cout
+      << "Hola, este programa muestra la divisón entera y el resto de dos "
+         "números enteros."
+      << std::endl;
+  std::cout << "Por favor, introduzca el dividendo: ";
+}
+
+void SegundoMensajeInicial() {
+  std::cout << std::endl;
+  std::cout << "Introduzca el divisor: ";
+}
+
+int main() {
+  //PrimerMensajeInicial();
+  int dividendo;
+  std::cin >> dividendo;
+  if (!std::cin) {
+    std::cerr << "Debe introducir un número natural." << std::endl;
+    exit(EXIT_SUCCESS);
+  }
+  //SegundoMensajeInicial();
+  int divisor;
+  std::cin >> divisor;
+  if (!std::cin) {
+    std::cerr << "Debe introducir un número natural." << std::endl;
+    exit(EXIT_SUCCESS);
+  }
+  if (divisor <= 0 || dividendo < 0) {
+    std::cerr << "Debe introducir un número natural." << std::endl;
+    exit(EXIT_SUCCESS);
+  }
+  std::cout << dividendo / divisor << " " << dividendo % divisor;
+  return 0;
+}
